@@ -1,0 +1,16 @@
+1 create a new repository with name of Note on the command line
+
+echo "# Note" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/DatumWorld/Note.git
+git push -u origin main
+
+2 push an existing repository from the command line
+git remote add origin https://github.com/DatumWorld/Note.git
+git branch -M main
+git push -u origin main
+
+
