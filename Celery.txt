@@ -1,2 +1,2 @@
-celery£º
+ï»¿celeryï¼š
 https://docs.celeryproject.org/en/3.1/

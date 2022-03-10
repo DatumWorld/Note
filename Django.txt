@@ -1,1 +1,1 @@
-https://www.djangoproject.com/
+﻿https://www.djangoproject.com/

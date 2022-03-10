@@ -1,1 +1,1 @@
-https://hub.docker.com/r/cloudera/quickstart
+﻿https://hub.docker.com/r/cloudera/quickstart
