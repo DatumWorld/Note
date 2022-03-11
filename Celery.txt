@@ -1,2 +1,14 @@
-﻿celery：
+﻿1  Celery：
 https://docs.celeryproject.org/en/3.1/
+
+2 Celery+Diango 集成配置
+官方说明
+https://docs.celeryproject.org/en/3.1/django/first-steps-with-django.html
+官方github示例
+https://github.com/celery/celery/tree/3.1/examples/django/
+
+3 配置参数说明
+https://docs.celeryproject.org/en/3.1/configuration.html
+
+4 设计工作流
+https://docs.celeryproject.org/en/3.1/userguide/canvas.html

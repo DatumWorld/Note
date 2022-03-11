@@ -1,0 +1,18 @@
+﻿1 下载
+https://www.microsoft.com/zh-cn/evalcenter/evaluate-sql-server-2019
+
+2 内存优化表和本机编译的存储过程
+https://docs.microsoft.com/zh-cn/sql/relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure?view=sql-server-ver15
+https://docs.microsoft.com/zh-cn/sql/relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures?view=sql-server-ver15
+
+3 列存储与索引 总目录链接
+https://docs.microsoft.com/zh-cn/sql/relational-databases/indexes/columnstore-indexes-overview?view=sql-server-ver15
+
+4 将行存储表转换为聚集列存储索引，或创建非聚集列存储索引
+https://docs.microsoft.com/zh-cn/sql/t-sql/statements/create-columnstore-index-transact-sql?view=sql-server-ver15
+
+5 always on 概述
+https://docs.microsoft.com/zh-cn/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver15
+
+6 always on 实例配置
+https://docs.microsoft.com/zh-cn/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15
