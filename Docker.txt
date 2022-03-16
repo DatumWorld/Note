@@ -1,0 +1,20 @@
+﻿参考网站
+https://www.docker.com/
+https://www.runoob.com/docker/docker-tutorial.html
+
+docker pull 拉取
+docker run 运行
+docker exec -it cdh bash 进入cdh的bash
+docker stop cdh 停止cdh 
+docker rm cdh  删除cdh
+docker stats 状态
+docker ps  
+docker images 列表
+docker network 网络设置
+docker build 
+
+将文件/hue.ini 复制到 hue容器内 指定位置，冒号 分割 容器名称 和位置
+docker cp /hue.ini hue:/usr/share/hue/desktop/conf/hue.ini
+
+将文件hue容器内 指定位置文件 复制到 宿主机 /hue.ini，冒号 分割 容器名称 和位置
+docker cp hue:/usr/share/hue/desktop/conf/hue.ini /

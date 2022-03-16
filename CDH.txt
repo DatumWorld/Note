@@ -1,2 +1,29 @@
 ﻿1 快速安装部署
 https://hub.docker.com/r/cloudera/quickstart
+
+2 参考
+https://www.cnblogs.com/piperck/p/9917118.html
+根据需要修改hosts  127.0.0.1 quickstart.cloudera
+
+简版命令
+docker run --hostname=quickstart.cloudera --privileged=true -t -i -p 8888 -p 7180 4239cd2958c6 /usr/bin/docker-quickstart
+
+比较完整版
+docker run -idt --hostname=quickstart.cloudera --privileged=true -p 8020:8020 -p 7180:7180 -p 21050:21050 -p 50070:50070 -p 50075:50075 -p 50010:50010 -p 50020:50020 -p 8890:8890 -p 60010:60010 -p 10002:10002 -p 25010:25010 -p 25020:25020 -p 18088:18088 -p 8088:8088 -p 19888:19888 -p 7187:7187 -p 11000:11000 -p 8888:8888 --name=cdh cloudera/quickstart /usr/bin/docker-quickstart
+
+进入cdh容器
+docker exec -it cdh bash
+
+启动CM
+/home/cloudera/cloudera-manager --express && service ntpd start
+
+按需要启动相关应用。可以开启HUE，进入UI交互操作。
+
+docker stop cdh 停止cdh
+docker rm cdh  删除cdh
+
+将文件/hue.ini 复制到 hue容器内 指定位置，冒号 分割 容器名称 和位置
+docker cp /hue.ini hue:/usr/share/hue/desktop/conf/hue.ini
+
+将文件hue容器内 指定位置文件 复制到 宿主机 /hue.ini，冒号 分割 容器名称 和位置
+docker cp hue:/usr/share/hue/desktop/conf/hue.ini /
