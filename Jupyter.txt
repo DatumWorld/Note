@@ -1,2 +1,10 @@
 ﻿官网
 https://jupyter.org/
+
+安装视频
+ ubuntu+conda 方式 
+https://www.bilibili.com/video/BV1fQ4y1X7KD
+windows+venv方式 
+https://www.bilibili.com/video/BV1no4y127wJ
+在环境中安装软件
+https://www.bilibili.com/video/BV1wo4y127Ap

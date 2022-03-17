@@ -16,3 +16,8 @@ https://docs.microsoft.com/zh-cn/sql/database-engine/availability-groups/windows
 
 6 always on 实例配置
 https://docs.microsoft.com/zh-cn/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15
+
+7 系统存储过程sp_MSforeachtable和sp_MSforeachdb,是微软提供的两个不公开的存储过程。可以用来对某个数据库的所有表或某个SQL服务器上的所有数据库进行管理
+参考
+https://www.cnblogs.com/firstdream/p/5690828.html
+https://blog.csdn.net/kk185800961/article/details/48574481/

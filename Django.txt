@@ -1,1 +1,8 @@
 ﻿https://www.djangoproject.com/
+
+1 windows 2019 IIS 部署
+参考wfastcgi。
+iis+fastcgi
+
+2 Linux部署
+nginx+uwsgi
