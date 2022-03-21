@@ -1,0 +1,5 @@
+﻿1 官网
+https://www.iis.net/
+
+2 ARR和Url Rewrite安装（实现集群与反向代理）
+https://www.iis.net/downloads/microsoft/application-request-routing

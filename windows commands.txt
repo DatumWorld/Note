@@ -1,2 +1,38 @@
 官网
 https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands
+
+1 删除文件夹下7天以前的文件
+bat文件存放以下代码，做成定时计划任务
+
+echo  %date% %time% deleting  7 days ago >>backup_log.txt
+set SrcDir=D:\ProjectBackup\
+set DaysAgo=7
+forfiles /p %SrcDir% /s /d -%DaysAgo% /c "cmd /c del /f /q /a @path && rd /s /q @path"
+
+ 2 bat内调用  7z程序 压缩文件夹
+"C:\Program Files\7-Zip\7z.exe" a -t7z "D:\ProjectBackup\project%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%.7z" "D:\project" -m0=LZMA2 -mhc -mhcf -mmt
+注意：需要安装7z（参考7z命令），根据环境调整。
+
+3 1和2 合一起。实现定期备份制定文件夹到指定位置，并删除过期备份
+
+4 命令行 call 计划任务。使用schtasks
+call 本机 
+schtasks /run /tn 计划任务名字
+call 远程
+schtasks /run /tn 计划任务名字  /s 主机ip /u 用户名 /p 密码 
+
+5 查找进程 jupyter.exe
+tasklist|find /c /i "jupyter.exe"
+6 杀死进程 jupyter.exe
+taskkill /f /t /im jupyter.exe
+/f 强制   /t 杀死进程树（关联的父进程）
+按照pid kill进程
+taskkill /f /pid 进程pid
+
+7 逐行读取文件
+for /f %%a in (文件名) do(echo %%a)
+
+8 打开一个cmd并进入某个路径然后执行命令
+start cmd /c "cd/d d:\project&activate"
+/c 不显示cmd窗口  /d 修改当前目录至路径目录  & 命令都要执行
+

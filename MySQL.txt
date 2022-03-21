@@ -1,0 +1,29 @@
+﻿1 官网 
+https://www.mysql.com/
+
+2 安装命令
+docker run -d --name=mysql8 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456Aa. --privileged mysql 
+配合CDH安装
+docker run -d --name=mysql8 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456Aa. --net hadoop_net --ip 172.10.0.5 -h mysql.hadoop --privileged mysql 
+
+2 忘记密码的参考方法
+https://blog.csdn.net/u012154840/article/details/104375578
+
+mysqld --shared-memory --skip-grant-tables -user=root 
+mysqld --skip-grant-tables --user=root 
+注意此方法会挂起控制台（可能无法正常关闭），需要去另一个控制台免密修改。使用此方法后可能会导致数据库自动反复重启cnetos7.x 和MySQL较高版本中）
+
+3 报错：New main PID 99 does not belong to service, and PID file is not owned by root.参考官方 疑似bug
+解决方案参考：
+https://blog.csdn.net/zhanremo3062/article/details/112262170
+添加-v /sys/fs/cgroup:/sys/fs/cgroup
+示例代码如下：
+docker run -v /sys/fs/cgroup:/sys/fs/cgroup -d --name=mysql8 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456Aa. --privileged mysql 
+
+
+4 多表join可能会很慢，比mssqlserver 和oracle慢，即使加索引
+https://www.cnblogs.com/Arlen/archive/2007/11/01/946250.html
+https://www.cnblogs.com/zedosu/p/6555981.html
+
+5 基本性能优化
+索引分区，尽量避免in distinct 和 复杂子查询，优先使用 join。读写分离。

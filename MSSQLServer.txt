@@ -21,3 +21,11 @@ https://docs.microsoft.com/zh-cn/sql/sql-server/failover-clusters/install/before
 参考
 https://www.cnblogs.com/firstdream/p/5690828.html
 https://blog.csdn.net/kk185800961/article/details/48574481/
+
+8 基本性能优化
+索引分区，尽量避免in distinct 和 复杂子查询，优先使用 join。
+
+9 对于偏向分析计算的SQL或者大的维度事实表，使用列存储压缩。IO密集型业务考虑内存表，结合本机编译存储过程。实时分析可以考虑事实表（行表）上加列索引。
+具体设计取决于具体业务的模型、维度以及性能要求。
+
+10 局域网之间优先使用内网地址（网络优化）。对于用户可以配置链接服务器避免错用。

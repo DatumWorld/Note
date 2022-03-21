@@ -27,3 +27,18 @@ docker cp /hue.ini hue:/usr/share/hue/desktop/conf/hue.ini
 
 将文件hue容器内 指定位置文件 复制到 宿主机 /hue.ini，冒号 分割 容器名称 和位置
 docker cp hue:/usr/share/hue/desktop/conf/hue.ini /
+--------------------------------------------------------------------------------------------------
+3 部署集群版
+参考
+http://www.javashuo.com/article/p-zqpijlqf-nb.html
+https://blog.csdn.net/matrixbbwolf/article/details/108865747
+https://www.jianshu.com/p/adfa7cfbdfb3
+
+出现的问题：
+（1）问题描述：容器（centos7.9）内安装的mysql 5.7.27或者8均无法获取初始密码，log空，尝试过网上搜索的多种方法均无解。空密码无效。
+        解决方法：使用mysql单独容器方式，可以设置初始密码，然后设置各个服务的数据库。具体参考MySQL。
+       重点步骤： docker run -it --name=mysql8 -p 13308:3306 -e MYSQL_ROOT_PASSWORD=123456Aa. --net hadoop_net --ip 172.10.0.5 -h mysql.hadoop --privileged mysql。   这时，初始化数据库命令应为/opt/cloudera/cm/schema/scm_prepare_database.sh mysql -h172.10.0.5 -uroot -p'123456Aa.' --scm-host cm.hadoop scm root 123456Aa. ，注意修改cm 配置文件中的相关设置，还有mysql访问权限，以及mysql版本不同的语法差异。
+
+（2）有的配置设置后无效，可能需要重启docker或宿主机，非重启服务。
+
+4 Hive跑批量离线，Impala负责实时查询，Spark统一内存计算，HBase列存储随机读写，sqoop负责和关系数据库打交道，oozie串成工作流，pyspark是python友好，HUE提供UI对大众SQL用户友好，yarn和zookeeper负责资源协调调度。

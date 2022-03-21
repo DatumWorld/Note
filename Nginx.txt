@@ -1,0 +1,50 @@
+﻿1 官网
+http://nginx.org/en/
+
+
+2 下面是一个uwsgi+django的配置示例，附带配置jupyter应用。
+保存个名字放在 /etc/nginx/sites-available/下(对于ubuntu)，并在sites-enabled/下放个同名链接指向它
+--------------------------------------------------------------------------------------------------------------------------------------
+server {
+        listen 8000 default_server;
+        listen [::]:8000 default_server;
+
+
+
+        server_name  localhost;   # 对外部用户提供的统一域名
+
+        # 将动态请求转发给uwsgi服务器
+    location / {
+        # 包含uwsgi请求的参数
+        # include uwsgi_params;
+        # 转交请求给uwsgi服务器 (uwsgi服务器的ip和端口号)
+        proxy_pass http://localhost:3132;  # 单个uwsgi服务器(不需要负载均衡)
+        # uwsgi_pass upstream1;
+        #proxy_redirect off;
+        #proxy_http_version 1.1;
+        #proxy_set_header Upgrade $http_upgrade;
+        #proxy_set_header Connection "upgrade";
+
+    }
+
+    # 如果是静态资源请求就直接响应资源。
+    location /static {
+        # 指定静态文件存放的目录 (需要修改目录的操作权限。
+        alias /webapp/static; 
+    }
+
+    expires 30d;
+    add_header Cache-Control public;
+
+     #访问jupyter的地址
+    location /jupyterlab {
+      proxy_pass http://localhost:8889/jupyterlab;
+      proxy_http_version 1.1;
+      proxy_redirect http:// https://;
+      #proxy_set_header Host $host:443/jupyterlab;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection upgrade;
+      proxy_set_header Accept-Encoding gzip;
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
