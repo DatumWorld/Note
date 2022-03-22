@@ -3,3 +3,19 @@ https://www.iis.net/
 
 2 ARR和Url Rewrite安装（实现集群与反向代理）
 https://www.iis.net/downloads/microsoft/application-request-routing
+
+3 部署Django参考
+可参考网络搜索“iis+wfastcgi+django”，重点是wfastcgi，通过fastcgi
+https://pypi.org/project/wfastcgi/
+
+4 通过命令重启IIS服务
+以下内容存入bat，按需定时运行（在IIS 10 和 windows server 2019 测试通过）
+--------------------------------------------------------------------------------------------
+net stop iisadmin /yes
+net stop w3svc
+echo stop IIS  %date% %time% >>IIS_Restart_Scheduler_log.txt
+net start iisadmin
+net start w3svc
+echo start IIS  %date% %time% >>IIS_Restart_Scheduler_log.txt
+--------------------------------------------------------------------------------------------------
+另有 iis reset 等

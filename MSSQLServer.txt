@@ -25,7 +25,44 @@ https://blog.csdn.net/kk185800961/article/details/48574481/
 8 基本性能优化
 索引分区，尽量避免in distinct 和 复杂子查询，优先使用 join。
 
-9 对于偏向分析计算的SQL或者大的维度事实表，使用列存储压缩。IO密集型业务考虑内存表，结合本机编译存储过程。实时分析可以考虑事实表（行表）上加列索引。
+9 表库设计
+对于偏向分析计算的SQL或者大的维度事实表，使用列存储压缩。IO密集型业务考虑内存表，结合本机编译存储过程。实时分析可以考虑事实表（行表）上加列索引。
 具体设计取决于具体业务的模型、维度以及性能要求。
 
-10 局域网之间优先使用内网地址（网络优化）。对于用户可以配置链接服务器避免错用。
+10 网络优化
+局域网之间优先使用内网地址（网络优化）。对于用户可以配置链接服务器避免错用。
+
+11 通过命令重启数据库
+以下内容存入bat，按需定时运行（根据版本和具体要求调整，140对应SQL Server2017）
+------------------------------------------------------------------------------------------------------------------------------
+net stop sqlserveragent
+net stop SQLPBDMS
+net stop SQLPBENGINE
+net stop MSSQLServerOLAPService
+net stop SQLTELEMETRY
+net stop SSISTELEMETRY140
+net stop MsDtsServer140
+
+net stop SQLServerReportingServices
+net stop SQLWriter
+net stop MSSQLFDLauncher
+net stop SQLBrowser
+net stop MSSQLLaunchpad
+net stop MSSQLSERVER
+echo stop MSSQLSERVER %date% %time% >>MSSQLSERVER_Scheduler_log.txt
+
+net start MSSQLSERVER
+net start MSSQLLaunchpad
+net start sqlserveragent
+net start SQLPBDMS
+net start SQLPBENGINE
+net start MSSQLServerOLAPService
+
+net start MsDtsServer140
+
+net start SQLServerReportingServices
+net start SQLWriter
+net start MSSQLFDLauncher
+net start SQLBrowser
+echo start MSSQLSERVER %date% %time% >>MSSQLSERVER_Scheduler_log.txt
+-------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,9 @@
+﻿MS SQLServer 报表服务
+
+1 官网
+https://docs.microsoft.com/zh-cn/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15  
+自 SQL Server 2008R2 及以后配套的 报表服务SSRS 较为好用。
+
+2 问题，由于版本差异或产品更新。报表打开可能会很慢.
+  可能原因：浏览器中F12发现 名称类似  Ai.xxxxx.js 可能因为网络卡住；查询得知，微软使用这个收集客户体验信息。
+ 解决方法：去注册表，关闭相关设置。SQL Server分支下的 CPE下的 CustomerFeed...和 ErrorReport两个选项，尤其SSRS下的，全部禁用（值改为0）。 SQL Server 2017中报表配置无该功能的开关选项。
