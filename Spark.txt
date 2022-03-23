@@ -1,0 +1,26 @@
+﻿Spark
+官网
+http://spark.incubator.apache.org/
+
+
+1  jupyter中运行spark-submit命令
+windows 2019+conda环境，代码单元格运行以下命令
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+!D:\ProgramData\spark-3.2.1-bin-hadoop3.2-scala2.13\bin\spark-submit --conf "spark.pyspark.python=D:\programdata\miniconda3\envs\jupyterpy38\python.exe" D:\ProgramData\spark-3.2.1-bin-hadoop3.2-scala2.13\examples\src\main\python\pi.py 10 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2 在spark上运行Hive
+新的推荐用法是 builder.enableHiveSupport()
+--------------------------------------------------------------------------------------------------
+spark = SparkSession\
+    .builder\
+    .master('local[*]')\ # 主机地址
+    .config("hive.metastore.uris","thrift://127.0.0.1:9083")\ # 元地址,可选
+    .appName('AppName')\
+    .enableHiveSupport()\ #启用Hive支持
+    .getOrCreate()
+result = spark.sql("SELECT * FROM xxxxx")
+--------------------------------------------------------------------------------------------------
+
+3 WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/D:/ProgramData/spark-3.2.1-bin-hadoop3.2-scala2.13/jars/spark-unsafe_2.13-3.2.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+不影响运行。经查询，一般认为与java版本有关，java11 出现这个，java8 正常。

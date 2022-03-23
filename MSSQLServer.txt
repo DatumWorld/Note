@@ -66,3 +66,37 @@ net start MSSQLFDLauncher
 net start SQLBrowser
 echo start MSSQLSERVER %date% %time% >>MSSQLSERVER_Scheduler_log.txt
 -------------------------------------------------------------------------------------------------------------------------------------
+
+12 处理json
+https://docs.microsoft.com/zh-cn/sql/relational-databases/json/json-data-sql-server?view=sql-server-ver15
+isjson openjson  forjson 等
+
+13使用加密进行连接
+https://docs.microsoft.com/zh-cn/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver15
+
+14 spark 读写mssqlserver
+https://github.com/microsoft/sql-spark-connector
+
+使用sql-spark-connector
+------------------------------------------------------------------------------------------------------------------------------------------
+DF = spark.read \
+    .format("com.microsoft.sqlserver.jdbc.spark") \
+    .option("url", "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=xxxxxx;" 
+     "encrypt=true;trustServerCertificate=true") \
+    .option("query", "select * from xxxx") \
+    .option("user", "sa") \
+    .option("password", "xxxx") \
+    .load()
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+使用sql-jdbc-connector
+------------------------------------------------------------------------------------------------------------------------------------------
+DF = spark.read \
+    .format("jdbc") \
+    .option("url", "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=xxxxxx;" 
+     "encrypt=true;trustServerCertificate=true") \
+    .option("query", "select * from xxxx") \
+    .option("user", "sa") \
+    .option("password", "xxxx") \
+    .load()
+--------------------------------------------------------------------------------------------------------------------------------------------
