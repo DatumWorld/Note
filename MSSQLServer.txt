@@ -100,3 +100,6 @@ DF = spark.read \
     .option("password", "xxxx") \
     .load()
 --------------------------------------------------------------------------------------------------------------------------------------------
+
+15 SQL操作XML
+https://docs.microsoft.com/en-us/sql/relational-databases/xml/for-xml-sql-server?view=sql-server-ver15

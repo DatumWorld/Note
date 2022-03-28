@@ -1,0 +1,23 @@
+﻿sqoop导入导出数据
+官网https://sqoop.apache.org/
+
+1 与mssqlserver
+
+从SQL Server导出数据到HDFS
+
+sql server2005及以后
+sqoop import --connect 'jdbc:sqlserver://192.168.xx.xx:1433;username=sa;password=xxxx;database=xxx' 
+--table sqlTest1 --target-dir '/sqoop/test1' -m 2
+
+sqoop import --connect 'jdbc:sqlserver://192.168.xx.xx:1433;username=sa;password=xxxx;database=xxx;selectMethod=cursor' 
+--table sqlTest1 --target-dir '/sqoop/test1' -m 2
+
+sql server2000区别如下
+jdbc:microsoft:sqlserver
+
+sqoop import --connect 'jdbc:sqlserver://192.168.20.105:1433;databasename=dep' --username sa --password Server2008!  --table test_table --fields-terminated-by '\001' --target-dir /user/hive/warehouse/sqlserverdb/wht_v2  -m 1
+
+
+从SQL Server导出数据到HIVE
+
+sqoop import --hive-import --connect 'jdbc:sqlserver://192.168.20.105:1433;databasename=dep' --username sa --password Server2008!  --table data_dictonary_test --hive-database  db2db --hive-table ata_dictonary_test --fields-terminated-by '\001' --hive-overwrite  -m 1

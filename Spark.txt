@@ -24,3 +24,16 @@ result = spark.sql("SELECT * FROM xxxxx")
 
 3 WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/D:/ProgramData/spark-3.2.1-bin-hadoop3.2-scala2.13/jars/spark-unsafe_2.13-3.2.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
 不影响运行。经查询，一般认为与java版本有关，java11 出现这个，java8 正常。
+
+
+4 初始化环境
+已经逐渐被2 的方式代替
+-------------------------------------------------------------------------------------------------------
+import pyspark
+from pyspark import SparkConf, SparkContext
+
+conf = SparkConf().setMaster("local").setAppName("App")
+sc = SparkContext()
+from pyspark.sql import SQLContext
+sqlcontext = SQLContext(sc)
+--------------------------------------------------------------------------------------------------------

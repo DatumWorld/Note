@@ -1,0 +1,8 @@
+﻿1 Python操作ftp
+https://docs.python.org/3.8/library/ftplib.html
+
+2 http操作，对比requests
+https://docs.python.org/zh-cn/3.8/library/http.html
+
+3 requests
+https://docs.python-requests.org/en/latest/user/install/

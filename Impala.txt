@@ -1,0 +1,10 @@
+﻿官网
+https://impala.apache.org/
+
+1 将表内数据导入到文件（表）可下载
+CREATE table test row format delimited fields terminated by ',' stored as textfile  as 
+select * from xxxx ;
+或者
+CREATE table test row format delimited fields terminated by ',' stored as parquet as 
+select * from xxxx ;
+然后去找标文件的存储位置（Location）下载

@@ -1,0 +1,16 @@
+﻿
+1 Hive导入txt数据到表
+create external table if not exists fun_user_external (
+    tid INT,
+    userid STRING, 
+    pwd STRING, 
+    create_time BIGINT,
+    email STRING
+    ...
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY '`' STORED AS TEXTFILE
+
+load data inpath '/tmp/fun_user.txt' into table fun_user_external;
+load data local inpath '/tmp/fun_user.txt' into table fun_user_external;
+上面两条数据导入语句，如果有local这个关键字，则这个路径应该为本地文件系统路径，数据会被拷贝到目标位置；如果省略掉local关键字，那么这个路径应该是分布式文件系统中的路径，这种情况下，数据是从这个路径转移到目标位置的。
+
+
