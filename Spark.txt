@@ -37,3 +37,8 @@ sc = SparkContext()
 from pyspark.sql import SQLContext
 sqlcontext = SQLContext(sc)
 --------------------------------------------------------------------------------------------------------
+
+5 github例子
+含java/scala/python/R的代码demo
+https://github.com/apache/spark/tree/v3.2.1/examples
+在下载的安装包中也可以找到
