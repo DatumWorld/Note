@@ -42,3 +42,12 @@ sqlcontext = SQLContext(sc)
 含java/scala/python/R的代码demo
 https://github.com/apache/spark/tree/v3.2.1/examples
 在下载的安装包中也可以找到
+
+6 若干文档库
+总目录          http://spark.incubator.apache.org/docs/latest/       
+SQL与DF      http://spark.incubator.apache.org/docs/latest/sql-programming-guide.html    
+RDD编程      http://spark.incubator.apache.org/docs/latest/rdd-programming-guide.html    
+流  	   http://spark.incubator.apache.org/docs/latest/streaming-programming-guide.html       
+结构流         http://spark.incubator.apache.org/docs/latest/structured-streaming-programming-guide.html
+ml机器学习  http://spark.incubator.apache.org/docs/latest/ml-guide.html
+python        http://spark.incubator.apache.org/docs/latest/api/python/getting_started/index.html
