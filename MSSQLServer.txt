@@ -103,3 +103,15 @@ DF = spark.read \
 
 15 SQL操作XML
 https://docs.microsoft.com/en-us/sql/relational-databases/xml/for-xml-sql-server?view=sql-server-ver15
+
+16 主数据服务MDS
+简介
+https://docs.microsoft.com/zh-cn/sql/master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel?view=sql-server-ver15
+
+Excel外接程序
+https://www.microsoft.com/zh-cn/download/details.aspx?id=52677
+下载地址 x64  https://download.microsoft.com/download/9/6/5/96567D8E-8688-4B78-94DA-EC54920FC36C/CHS/x64/MasterDataServicesExcelAddin.msi
+下载地址 x32 https://download.microsoft.com/download/9/6/5/96567D8E-8688-4B78-94DA-EC54920FC36C/CHS/x86/MasterDataServicesExcelAddin.msi
+
+17 数据质量服务DQS
+https://docs.microsoft.com/zh-cn/sql/data-quality-services/introduction-to-data-quality-services?view=sql-server-ver15
