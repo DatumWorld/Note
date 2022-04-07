@@ -1,0 +1,16 @@
+﻿DevOps CI/CD
+持续集成/持续交付/持续部署
+
+1 Jenkins持续集成工具
+主要用于持续、自动的构建/测试软件项目、监控外部任务的运行。管理着软件集成和部署过程中各个组件的工作，使这个过程更加自动化，减轻开发人员和运维人员的工作负担
+官网
+https://www.jenkins.io/
+下载
+https://www.jenkins.io/download/
+
+IIS 配置说明
+https://www.jenkins.io/doc/book/system-administration/reverse-proxy-configuration-iis/
+Nginx配置说明
+https://www.jenkins.io/doc/book/system-administration/reverse-proxy-configuration-nginx/
+快速例子
+https://www.jenkins.io/doc/pipeline/tour/hello-world/
