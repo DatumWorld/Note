@@ -6,3 +6,15 @@ https://docs.python.org/zh-cn/3.8/library/http.html
 
 3 requests
 https://docs.python-requests.org/en/latest/user/install/
+
+4 测试工具
+集合地址
+https://wiki.python.org/moin/PythonTestingToolsTaxonomy
+
+python自带unittest 
+https://docs.python.org/zh-cn/3/library/unittest.html
+ python自带pdb
+https://docs.python.org/zh-cn/3/library/pdb.html
+
+pytest地址
+https://pytest.org/en/latest/
