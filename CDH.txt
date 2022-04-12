@@ -42,3 +42,8 @@ https://www.jianshu.com/p/adfa7cfbdfb3
 （2）有的配置设置后无效，可能需要重启docker或宿主机，非重启服务。
 
 4 Hive跑批量离线，Impala负责实时查询，Spark统一内存计算，HBase列存储随机读写，sqoop负责和关系数据库打交道，oozie串成工作流，pyspark是python友好，HUE提供UI对大众SQL用户友好，yarn和zookeeper负责资源协调调度。
+
+5 CDH/CDP spark_SQL
+https://docs.cloudera.com/cdp-private-cloud-base/7.1.5/developing-spark-applications/topics/spark-sql-example.html
+https://blog.csdn.net/Mrheiiow/article/details/123007848
+http://blog.51yip.com/hadoop/2286.html/comment-page-1
