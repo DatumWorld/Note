@@ -1,0 +1,11 @@
+﻿官网
+https://www.scala-lang.org/
+https://docs.scala-lang.org/api/all.html
+https://github.com/scala/scala
+
+1 教程
+参考
+https://www.runoob.com/scala/scala-basic-syntax.html
+
+在IDEA中使用
+https://docs.scala-lang.org/getting-started/intellij-track/getting-started-with-scala-in-intellij.html
