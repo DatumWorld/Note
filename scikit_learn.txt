@@ -1,0 +1,7 @@
+﻿官方
+https://scikit-learn.org/
+https://scikit-learn.org/stable/user_guide.html  # 用户指南
+https://scikit-learn.org/stable/auto_examples/index.html #例子
+ 稳定的早期版本
+https://scikit-learn.org/0.24/
+数据预处理、回归、分类、降维、聚类、预测、模型选择评估验证
