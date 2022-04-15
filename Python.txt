@@ -28,3 +28,91 @@ https://pypi.org/project/toposort/
 
 7 DFS与BFS
 https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
+
+8 包导入
+https://docs.python.org/zh-cn/3.8/reference/import.html
+有关 __main__ 的特殊事项
+https://docs.python.org/zh-cn/3.8/reference/import.html
+
+9 表达式
+https://docs.python.org/zh-cn/3.8/reference/expressions.html
+
+10 全局解释器锁
+https://docs.python.org/zh-cn/3.8/glossary.html#term-global-interpreter-lock
+
+11 基于线程的并行
+https://docs.python.org/zh-cn/3.8/library/threading.html
+
+12 基于进程的并行
+https://docs.python.org/zh-cn/3.8/library/multiprocessing.html
+三种启动方法
+关于为什么 if __name__ == '__main__' 部分是必需的解释：从而保护程序"入口点":
+https://docs.python.org/zh-cn/3.8/library/multiprocessing.html#multiprocessing-programming
+---------------------------------------------------------------------------------------------------------------
+from multiprocessing import Pool
+
+def f(x):
+    return x*x
+
+if __name__ == '__main__':
+    with Pool(5) as p:
+        print(p.map(f, [1, 2, 3]))
+---------------------------------------------------------------------------------------------------------------
+新的方式
+https://docs.python.org/zh-cn/3.8/library/concurrent.futures.html
+ThreadPoolExecutor
+https://docs.python.org/zh-cn/3.8/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor
+ProcessPoolExecutor
+https://docs.python.org/zh-cn/3.8/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor
+-------------------------------------------------------------------------------------------------------------------------
+import concurrent.futures
+import math
+
+PRIMES = [
+    112272535095293,
+    112582705942171,
+    112272535095293,
+    115280095190773,
+    115797848077099,
+    1099726899285419]
+
+def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+
+    sqrt_n = int(math.floor(math.sqrt(n)))
+    for i in range(3, sqrt_n + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+def main():
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        for number, prime in zip(PRIMES, executor.map(is_prime, PRIMES)):
+            print('%d is prime: %s' % (number, prime))
+
+if __name__ == '__main__':
+    main()
+------------------------------------------------------------------------------------------------------------------
+
+13 子进程
+https://docs.python.org/zh-cn/3.8/library/subprocess.html
+
+14 sched 事件调度器
+https://docs.python.org/zh-cn/3.8/library/sched.html
+
+15 queue 一个同步的队列类
+https://docs.python.org/zh-cn/3.8/library/queue.html
+
+16 发送邮件
+ smtp
+https://docs.python.org/zh-cn/3.8/library/smtplib.html
+email
+https://docs.python.org/zh-cn/3.8/library/email.examples.html
+
+17 异步async await 
+https://docs.python.org/zh-cn/3.8/library/asyncio-dev.html

@@ -1,4 +1,7 @@
-﻿
+﻿官网
+https://hive.apache.org/
+https://cwiki.apache.org/confluence/display/Hive//LanguageManual
+
 1 Hive导入txt数据到表
 create external table if not exists fun_user_external (
     tid INT,
@@ -13,4 +16,22 @@ load data inpath '/tmp/fun_user.txt' into table fun_user_external;
 load data local inpath '/tmp/fun_user.txt' into table fun_user_external;
 上面两条数据导入语句，如果有local这个关键字，则这个路径应该为本地文件系统路径，数据会被拷贝到目标位置；如果省略掉local关键字，那么这个路径应该是分布式文件系统中的路径，这种情况下，数据是从这个路径转移到目标位置的。
 
+
+2 从查询将数据写入文件系统
+
+Standard syntax:
+INSERT OVERWRITE [LOCAL] DIRECTORY directory1
+  [ROW FORMAT row_format] [STORED AS file_format] (Note: Only available starting with Hive 0.11.0)
+  SELECT ... FROM ...
+ 
+Hive extension (multiple inserts):
+FROM from_statement
+INSERT OVERWRITE [LOCAL] DIRECTORY directory1 select_statement1
+[INSERT OVERWRITE [LOCAL] DIRECTORY directory2 select_statement2] ...
+ 
+  
+row_format
+  : DELIMITED [FIELDS TERMINATED BY char [ESCAPED BY char]] [COLLECTION ITEMS TERMINATED BY char]
+        [MAP KEYS TERMINATED BY char] [LINES TERMINATED BY char]
+        [NULL DEFINED AS char] (Note: Only available starting with Hive 0.13)
 
