@@ -123,3 +123,6 @@ https://docs.python.org/zh-cn/3.8/library/ctypes.html
 19 Cython  python调用C/C++
 https://cython.org/
 https://cython.readthedocs.io/en/stable/index.html
+
+20 使用cmake阅读开发源码（官方版构建方式特殊）
+git://github.com/python-cmake-buildsystem/python-cmake-buildsystem

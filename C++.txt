@@ -1,0 +1,14 @@
+﻿官网
+https://isocpp.org/
+
+https://www.runoob.com/cplusplus/cpp-standard-library.html
+
+2
+GNU C++ 官方文档
+https://gcc.gnu.org/onlinedocs/libstdc++/
+源码已经并入GCC，下载GCC源码即可
+标准支持状态
+https://gcc.gnu.org/projects/cxx-status.html#cxx11
+
+3 MS C++ 标准库参考
+https://docs.microsoft.com/zh-cn/cpp/standard-library/cpp-standard-library-reference?view=msvc-140

@@ -1,0 +1,31 @@
+﻿C 标准
+1990-2018
+https://www.iso.org/standard/17782.html
+https://www.iso.org/standard/29237.html
+https://www.iso.org/standard/57853.html
+https://www.iso.org/standard/74528.html
+
+参考
+https://www.runoob.com/cprogramming/c-tutorial.html
+
+2  GNU C
+参考手册
+https://www.gnu.org/software/libc/manual/
+ 源码
+https://www.gnu.org/software/libc/sources.html
+https://sourceware.org/git/glibc.git
+---------------------------------------------------------------------------------------------------------------------------
+Checkout the latest glibc in development:
+
+git clone https://sourceware.org/git/glibc.git
+cd glibc
+git checkout master
+Releases are available by source branch checkout (gitweb) and tarball via ftp.
+
+Checkout the latest glibc 2.35 stable release:
+
+git clone https://sourceware.org/git/glibc.git
+cd glibc
+git checkout release/2.35/master
+Release tarballs are available via anonymous ftp at http://ftp.gnu.org/gnu/glibc/ and its mirrors.
+------------------------------------------------------------------------------------------------------------------------------
