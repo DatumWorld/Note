@@ -1,4 +1,12 @@
-﻿1 Python操作ftp
+﻿官网
+https://www.python.org/
+https://docs.python.org/3/   #文档总览
+https://docs.python.org/3/reference/index.html # 语言参考
+https://docs.python.org/3/library/index.html # 标准库
+https://docs.python.org/3/c-api/index.html    #C/C++参考
+https://docs.python.org/3/extending/index.html #C/C++参考
+
+1 Python操作ftp
 https://docs.python.org/3.8/library/ftplib.html
 
 2 http操作，对比requests
@@ -126,3 +134,18 @@ https://cython.readthedocs.io/en/stable/index.html
 
 20 使用cmake阅读开发源码（官方版构建方式特殊）
 git://github.com/python-cmake-buildsystem/python-cmake-buildsystem
+
+21 函数filter zip map reduce （类比spark的MR过程）
+https://docs.python.org/3/library/functional.html
+
+22 __main__解释
+https://docs.python.org/3/library/__main__.html
+
+23 abc 抽象基类
+https://docs.python.org/3/library/abc.html
+
+24 GC 垃圾回收
+https://docs.python.org/3/library/gc.html
+
+25 通过 Windows 开始使用 Python
+https://docs.microsoft.com/zh-cn/windows/python/

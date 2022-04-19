@@ -127,3 +127,9 @@ https://docs.microsoft.com/zh-cn/sql/t-sql/language-reference?view=sql-server-20
 https://docs.microsoft.com/zh-cn/sql/t-sql/functions/functions?view=sql-server-2017
 DBCC 数据库管理
 https://docs.microsoft.com/zh-cn/sql/t-sql/database-console-commands/database-console-commands?view=sql-server-2017
+
+
+19  COALESCE
+按顺序计算变量并返回最初不等于 NULL 的第一个表达式的当前值。 例如，SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value'); 返回第三个值，因为第三个值是首个为非 Null 的值。
+官方文档
+https://docs.microsoft.com/zh-cn/sql/t-sql/language-elements/coalesce-transact-sql?view=sql-server-2017

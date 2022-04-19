@@ -12,3 +12,4 @@ https://gcc.gnu.org/projects/cxx-status.html#cxx11
 
 3 MS C++ 标准库参考
 https://docs.microsoft.com/zh-cn/cpp/standard-library/cpp-standard-library-reference?view=msvc-140
+https://docs.microsoft.com/zh-cn/cpp/?view=msvc-140
