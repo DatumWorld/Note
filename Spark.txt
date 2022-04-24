@@ -51,3 +51,6 @@ RDD编程      http://spark.incubator.apache.org/docs/latest/rdd-programming-gui
 结构流         http://spark.incubator.apache.org/docs/latest/structured-streaming-programming-guide.html
 ml机器学习  http://spark.incubator.apache.org/docs/latest/ml-guide.html
 python        http://spark.incubator.apache.org/docs/latest/api/python/getting_started/index.html
+
+7 问题：Py4JJavaError: An error occurred while calling o675.showString. 
+解决：但是重新运行笔记本后无异常
