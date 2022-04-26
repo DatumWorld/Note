@@ -133,3 +133,11 @@ https://docs.microsoft.com/zh-cn/sql/t-sql/database-console-commands/database-co
 按顺序计算变量并返回最初不等于 NULL 的第一个表达式的当前值。 例如，SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value'); 返回第三个值，因为第三个值是首个为非 Null 的值。
 官方文档
 https://docs.microsoft.com/zh-cn/sql/t-sql/language-elements/coalesce-transact-sql?view=sql-server-2017
+
+20 创建索引
+https://docs.microsoft.com/zh-cn/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017
+
+21 BULK INSERT与 openrowset bcp与大容量数据导入导出 
+https://docs.microsoft.com/zh-cn/sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server?view=sql-server-2017
+https://docs.microsoft.com/zh-cn/sql/t-sql/statements/bulk-insert-transact-sql?view=sql-server-2017
+https://docs.microsoft.com/zh-cn/sql/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server?view=sql-server-2017

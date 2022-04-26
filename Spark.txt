@@ -54,3 +54,9 @@ python        http://spark.incubator.apache.org/docs/latest/api/python/getting_s
 
 7 问题：Py4JJavaError: An error occurred while calling o675.showString. 
 解决：但是重新运行笔记本后无异常
+
+8 分析IIS 等日志
+https://blog.csdn.net/weixin_34408717/article/details/93452463
+
+9 java应用中提交spark
+https://www.cnblogs.com/javalinux/p/15094833.html
