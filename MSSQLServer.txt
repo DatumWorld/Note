@@ -141,3 +141,6 @@ https://docs.microsoft.com/zh-cn/sql/t-sql/statements/create-index-transact-sql?
 https://docs.microsoft.com/zh-cn/sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server?view=sql-server-2017
 https://docs.microsoft.com/zh-cn/sql/t-sql/statements/bulk-insert-transact-sql?view=sql-server-2017
 https://docs.microsoft.com/zh-cn/sql/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server?view=sql-server-2017
+
+22 SSMS操作
+https://docs.microsoft.com/zh-cn/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN&view=sql-server-ver15

@@ -60,3 +60,16 @@ https://blog.csdn.net/weixin_34408717/article/details/93452463
 
 9 java应用中提交spark
 https://www.cnblogs.com/javalinux/p/15094833.html
+
+10 python 应用中提交pyspark 代码
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+import subprocess
+
+if __name__=='__main__':
+    cmd=rf'''"D:\ProgramData\spark-3.2.1-bin-hadoop3.2-scala2.13\bin\spark-submit2.cmd" --conf "spark.pyspark.python=D:\programdata\miniconda3\envs\reportpy38\python.exe" "D:\ProgramData\spark-3.2.1-bin-hadoop3.2-scala2.13\examples\src\main\python\pi.py" 10
+'''
+    print(cmd)
+    result = subprocess.check_output(cmd)
+    print(result)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

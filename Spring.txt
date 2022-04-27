@@ -6,3 +6,8 @@ https://github.com/spring-guides
 2 springcloud
 https://spring.io/projects/spring-cloud
 https://www.springcloud.cc/
+
+3 pom.xml 文件
+https://maven.apache.org/pom.html
+settings.xml
+https://maven.apache.org/settings.html

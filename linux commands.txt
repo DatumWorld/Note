@@ -5,3 +5,13 @@ https://www.runoob.com/linux/linux-command-manual.html
 
 2 参考
 https://www.jianshu.com/p/432b78321c2b
+
+
+3 crontab 定时执行程序命令
+https://www.runoob.com/linux/linux-comm-crontab.html
+
+4 vim和vi
+https://www.runoob.com/linux/linux-vim.html
+
+5 shell 函数
+https://www.runoob.com/linux/linux-shell-func.html

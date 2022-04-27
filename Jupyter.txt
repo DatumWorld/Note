@@ -1,10 +1,20 @@
 ﻿官网
 https://jupyter.org/
 
-安装视频
+1 安装视频
  ubuntu+conda 方式 
 https://www.bilibili.com/video/BV1fQ4y1X7KD
 windows+venv方式 
 https://www.bilibili.com/video/BV1no4y127wJ
 在环境中安装软件
 https://www.bilibili.com/video/BV1wo4y127Ap
+
+2 windows上通过cmd执行jupyter数字实验室中的py应用的命令模板。以下四种都可以参考（通过os.system 执行）
+
+"cd/d D:\jupyter\project\各种问题\&&D:\programdata\miniconda3\envs\jupyterpy38\python.exe cmd调用测试1.py"
+
+start cmd /c "cd/d D:\jupyter\project\各种问题\&&D:\programdata\miniconda3\envs\jupyterpy38\python.exe cmd调用测试1.py"
+
+start cmd /c "cd/d D:\jupyter\project\各种问题\&&conda activate D:\programdata\miniconda3\envs\jupyterpy38&&python cmd调用测试1.py"
+
+"cd/d D:\jupyter\project\各种问题\&&conda activate D:\programdata\miniconda3\envs\jupyterpy38&&python cmd调用测试1.py"
