@@ -1,0 +1,12 @@
+﻿官网
+https://pypi.org
+
+1 安装包
+https://pypi.org/help/#installing
+2 发布包
+https://pypi.org/help/#publishing
+3 API
+https://warehouse.readthedocs.io/api-reference/
+4 搭建pypi 镜像
+https://pypi.org/project/bandersnatch/
+https://bandersnatch.readthedocs.io/en/latest/
