@@ -144,3 +144,15 @@ https://docs.microsoft.com/zh-cn/sql/relational-databases/import-export/import-b
 
 22 SSMS操作
 https://docs.microsoft.com/zh-cn/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN&view=sql-server-ver15
+
+23 图数据库
+https://docs.microsoft.com/zh-cn/sql/relational-databases/graphs/sql-graph-overview?view=sql-server-2017
+https://docs.microsoft.com/zh-cn/sql/relational-databases/graphs/sql-graph-sample?view=sql-server-2017
+
+24 空间数据
+https://docs.microsoft.com/zh-cn/sql/relational-databases/spatial/spatial-data-sql-server?view=sql-server-2017
+
+25 存储过程
+https://docs.microsoft.com/zh-cn/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-2017
+查看存储过程的依赖关系
+https://docs.microsoft.com/zh-cn/sql/relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure?view=sql-server-2017
