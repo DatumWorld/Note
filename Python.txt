@@ -149,3 +149,24 @@ https://docs.python.org/3/library/gc.html
 
 25 通过 Windows 开始使用 Python
 https://docs.microsoft.com/zh-cn/windows/python/
+
+26 subprocess 子进程调用
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+# 此处仅展示常用几种方法，注意命令中的 引号
+import os
+import subprocess
+
+cmd = '"D:\\Program Files\\7-Zip\\7z.exe" x "D:\\media\\Download\\zzzz.zip" -y -aoa -o"D:\\media\\Download"'
+cmd2 = '"D:\Program Files\7-Zip\7z.exe" x "D:\media\Download\zzzz.zip" -y -aoa -o"D:\media\Download"'
+cmd3 = "cd/d D:\\project\\各种问题\\&&D:\\programdata\\miniconda3\\envs\\yyy\\python.exe xxx.py"
+cmd3="cd/d D:\project\各种问题\&&D:\programdata\miniconda3\envs\yyy\python.exe xxx.py"
+
+# result = os.system(cmd3) # 传统方式
+
+# result = subprocess.check_output(cmd3,shell=True) # 可以捕获输出
+result = subprocess.run(cmd3, shell=True,capture_output=True, text=True) # 比较清晰捕获输出
+print(result)
+# print(result.returncode,result.stdout,result.stderr,result.args)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+

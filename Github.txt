@@ -1,4 +1,8 @@
-﻿1 create a new repository with name of Note on the command line
+﻿官网
+https://github.com/
+https://docs.github.com/
+
+1 create a new repository with name of Note on the command line
 
 echo "# Note" >> README.md
 git init
