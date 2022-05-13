@@ -156,3 +156,18 @@ https://docs.microsoft.com/zh-cn/sql/relational-databases/spatial/spatial-data-s
 https://docs.microsoft.com/zh-cn/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-2017
 查看存储过程的依赖关系
 https://docs.microsoft.com/zh-cn/sql/relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure?view=sql-server-2017
+
+
+26 SQL Server生成连续日期序列
+
+SELECT
+dateadd(d, number, '2021-12-31') AS 范围日期序列
+FROM
+master..spt_values -- 系统常量表
+WHERE
+type = 'p'
+AND number between 1 and 100 --注意：最多生成2048个
+
+注意：系统常量表是微软未公开的内部用途，微软可以变更但不通知。使用时应当心
+参考
+https://social.msdn.microsoft.com/Forums/sqlserver/en-US/a7cc9252-a1d1-4f51-9c35-7cd9720b507c/what-is-the-use-of-table-masterdbosptvalues?forum=transactsql
