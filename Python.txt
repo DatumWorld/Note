@@ -169,4 +169,6 @@ print(result)
 # print(result.returncode,result.stdout,result.stderr,result.args)
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
+27 MQTT 消息队列传输协议，物联网轻量级消息队列服务
+https://pypi.org/project/paho-mqtt/
 

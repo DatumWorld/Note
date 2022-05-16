@@ -6,3 +6,6 @@ iis+fastcgi
 
 2 Linux部署
 nginx+uwsgi
+
+3 django-redis
+https://pypi.org/project/django-redis/
