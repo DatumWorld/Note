@@ -171,3 +171,6 @@ AND number between 1 and 100 --注意：最多生成2048个
 注意：系统常量表是微软未公开的内部用途，微软可以变更但不通知。使用时应当心
 参考
 https://social.msdn.microsoft.com/Forums/sqlserver/en-US/a7cc9252-a1d1-4f51-9c35-7cd9720b507c/what-is-the-use-of-table-masterdbosptvalues?forum=transactsql
+
+27 数据load性能 The Data Loading Performance Guide
+https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)
