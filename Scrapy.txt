@@ -1,0 +1,5 @@
+﻿官网
+https://scrapy.org/
+https://scrapy-redis.readthedocs.io/en/stable/index.html
+
+https://blog.csdn.net/pengjunlee/article/details/89853550

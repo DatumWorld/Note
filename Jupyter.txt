@@ -18,3 +18,60 @@ start cmd /c "cd/d D:\jupyter\project\各种问题\&&D:\programdata\miniconda3\e
 start cmd /c "cd/d D:\jupyter\project\各种问题\&&conda activate D:\programdata\miniconda3\envs\jupyterpy38&&python cmd调用测试1.py"
 
 "cd/d D:\jupyter\project\各种问题\&&conda activate D:\programdata\miniconda3\envs\jupyterpy38&&python cmd调用测试1.py"
+
+
+3 jupyterlab Notebook 导出网页并修改js 去除codecell等 （使用正则表达式）
+-----------------------------------------------------------------------------------------------------------------------------------------------
+"""
+for jupyterlab 2.x.
+# 1 替换静态资源（js css等）位置 2 去掉 代码单元格 和 弹出框
+"""
+import re
+
+r = '(\\<div class="input"\\>[\\s]*\\<div class="prompt input_prompt"\\>[^<]*</div>[\\s]*\\<div class="inner_cell"\\>[\\s]*\\<div class="input_area"\\>[\\s]<div class=" highlight hl-ipython3">[\\s\\S]+?)<div class="output_wrapper">'
+
+rr = '(<div class="prompt output_prompt">[\s\S]+?</div>)'
+
+with open("例子.html", encoding="utf-8") as f:
+    s = f.read()
+
+s = s.replace("https://cdnjs.cloudflare.com", "/static/jupyter")
+
+l = re.findall(r, s)
+for i in l:
+    s = s.replace(i, "")
+
+l = re.findall(rr, s)
+for i in l:
+    s = s.replace(i, "")
+
+with open("result.html", "w", encoding="utf-8") as f:
+    f.write(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+for jupyterlab 3.x.
+# 1 替换静态资源（js css等）位置 2 去掉 代码单元格 和 弹出框
+Tested well on 3.4.x
+"""
+
+import re
+
+r = '(\\<div class="jp-InputArea jp-Cell-inputArea"\\>[\\s\\S]\\<div class="jp-InputPrompt jp-InputArea-prompt"\\>[^<]*</div>[\\s]*\\<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline"\\>[\\s]*\\<div class="CodeMirror cm-s-jupyter"\\>[\\s]<div class=" highlight hl-ipython3">[\\s\\S]+?)<div class="jp-Cell-outputWrapper">'
+
+rr = '(<div class="jp-OutputPrompt jp-OutputArea-prompt">[^<]*</div>)'
+
+with open("例子.html", encoding="utf-8") as f:
+    s = f.read()
+s = s.replace("https://cdnjs.cloudflare.com", "/static/jupyter")
+l = re.findall(r, s)
+
+for i in l:
+    s = s.replace(i, "</div>")
+
+l = re.findall(rr, s)
+for i in l:
+    s = s.replace(i, "")
+
+with open("result.html", "w", encoding="utf-8") as f:
+    f.write(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
