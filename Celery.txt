@@ -12,3 +12,10 @@ https://docs.celeryproject.org/en/3.1/configuration.html
 
 4 设计工作流
 https://docs.celeryproject.org/en/3.1/userguide/canvas.html
+
+5  报错：Timer‘ object has no attribute ‘isAlive‘
+背景： celery 3.1.26.POST2 在由python3.8升级到python3.9 后出现。
+分析：分析引用，Ctrl+B 可发现在threading.pyi中 给出信息，python3.8之前 使用 isAlive，python3.9 变成is_alive。替换timer2中的isAlive为 is_alive，解决。也可根据情况升级celery版本
+参考：https://blog.csdn.net/weixin_43361136/article/details/119146932
+https://github.com/miyouzi/aniGamerPlus/issues/71
+https://github.com/knownsec/pocsuite3/issues/154
