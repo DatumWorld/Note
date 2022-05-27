@@ -19,3 +19,7 @@ https://docs.celeryproject.org/en/3.1/userguide/canvas.html
 参考：https://blog.csdn.net/weixin_43361136/article/details/119146932
 https://github.com/miyouzi/aniGamerPlus/issues/71
 https://github.com/knownsec/pocsuite3/issues/154
+
+6 问题：celery在python3.7+ 启动报错
+原因：async成为关键字
+方法：将 kombu和celery 程序目录下的 async文件夹名或引用 改成asynchronous
