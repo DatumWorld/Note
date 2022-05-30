@@ -174,3 +174,29 @@ https://social.msdn.microsoft.com/Forums/sqlserver/en-US/a7cc9252-a1d1-4f51-9c35
 
 27 数据load性能 The Data Loading Performance Guide
 https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)
+
+28 使用 BCP 导入和导出批量数据
+https://docs.microsoft.com/zh-cn/sql/relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server?view=sql-server-2017
+
+29 设置和性能优化 故障排除相关
+推荐配置
+https://docs.microsoft.com/zh-cn/troubleshoot/sql/performance/recommended-updates-configuration-workloads
+CPU使用率高
+https://docs.microsoft.com/zh-cn/troubleshoot/sql/performance/troubleshoot-high-cpu-usage-issues
+IO缓慢
+https://docs.microsoft.com/zh-cn/troubleshoot/sql/performance/troubleshoot-sql-io-performance
+显示正在进行的查询 查询计划
+https://docs.microsoft.com/zh-cn/troubleshoot/sql/performance/troubleshoot-slow-running-queries
+无法修改表。超时已过期。
+https://docs.microsoft.com/zh-cn/troubleshoot/sql/ssms/error-modify-large-table-using-ssms
+使用 SSMS运行返回大量数据SQL查询时，将收到类似于以下内容的错误消息：执行批处理时出错。 错误消息为：引发类型"System.OutOfMemoryException"的异常
+https://docs.microsoft.com/zh-cn/troubleshoot/sql/ssms/exception-you-execute-query
+不允许保存更改。 您所做的更改需要删除和重新创建下表。 您更改了无法创建的表，或者启用了"阻止保存需要重新创建表的更改"选项。
+https://docs.microsoft.com/zh-cn/troubleshoot/sql/ssms/error-when-you-save-table
+
+30 通过使用内存优化获得更快的临时表和表变量
+https://docs.microsoft.com/zh-cn/sql/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization?view=sql-server-2017
+
+31 分区
+https://docs.microsoft.com/zh-cn/sql/relational-databases/partitions/partitioned-tables-and-indexes?view=sql-server-ver15
+https://docs.microsoft.com/zh-cn/sql/t-sql/statements/create-partition-function-transact-sql?view=sql-server-ver15
