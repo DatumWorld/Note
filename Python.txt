@@ -174,3 +174,6 @@ https://pypi.org/project/paho-mqtt/
 
 28 python redis 客户端
 https://pypi.org/project/redis/
+
+29 连接HBase Impala Hive Presto Kafka RabbitMQ
+使用pyhive  impyla happybase kafka-python ampq mqtt等等
