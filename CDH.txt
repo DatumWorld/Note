@@ -47,3 +47,7 @@ https://www.jianshu.com/p/adfa7cfbdfb3
 https://docs.cloudera.com/cdp-private-cloud-base/7.1.5/developing-spark-applications/topics/spark-sql-example.html
 https://blog.csdn.net/Mrheiiow/article/details/123007848
 http://blog.51yip.com/hadoop/2286.html/comment-page-1
+
+6 CDH常用端口
+https://www.jianshu.com/p/6f9b9b5f6100
+https://blog.csdn.net/u011110301/article/details/119002470

@@ -3,3 +3,13 @@ https://scrapy.org/
 https://scrapy-redis.readthedocs.io/en/stable/index.html
 
 https://blog.csdn.net/pengjunlee/article/details/89853550
+
+
+1 结果返回乱码的可能原因："accept-encoding": "gzip, deflate, br",会返回压缩内容，接收端如果不能正常解压会乱码
+也有可能返回的编码不正确。
+
+2 scrapy2.5 以上版本 对 http2  的 支持开始逐渐完善。
+
+3 httpx 支持http1.1和2，支持同步或异步；启用h2时需要去掉消息头中 的 带前置冒号的h2新属性，因为会自动添加，可能报类似“重复属性名”错误。
+
+4 requests仅支持http1.1，可通过 hyper支持http2，但hyper长期不更新。

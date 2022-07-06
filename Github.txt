@@ -18,3 +18,8 @@ git branch -M main
 git push -u origin main
 
 
+
+3 github dns
+https://zhuanlan.zhihu.com/p/403089781
+https://zhuanlan.zhihu.com/p/489362379
+

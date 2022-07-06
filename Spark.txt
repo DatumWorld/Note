@@ -73,3 +73,17 @@ if __name__=='__main__':
     print(result)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+11 Spark内存资源分配
+https://blog.csdn.net/qq_28658621/article/details/122579717
+
+12 Spark JVM参数优化设置及Sparkstreaming优化和反压机制
+http://t.zoukankan.com/jiashengmei-p-13746372.html
+
+13 Spark Streaming动态资源分配
+https://blog.csdn.net/wangpei1949/article/details/90734304
+Spark Streaming资源动态分配和动态控制消费速率
+http://t.zoukankan.com/sparkbigdata-p-5544609.html
+
+
+14 Spark入Hbase的四种方式效率对比
+https://www.cnblogs.com/runnerjack/p/10480468.html

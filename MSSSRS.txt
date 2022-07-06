@@ -7,3 +7,49 @@ https://docs.microsoft.com/zh-cn/sql/reporting-services/create-deploy-and-manage
 2 问题，由于版本差异或产品更新。报表打开可能会很慢.
   可能原因：浏览器中F12发现 名称类似  Ai.xxxxx.js 可能因为网络卡住；查询得知，微软使用这个收集客户体验信息。
  解决方法：去注册表，关闭相关设置。SQL Server分支下的 CPE下的 CustomerFeed...和 ErrorReport两个选项，尤其SSRS下的，全部禁用（值改为0）。 SQL Server 2017中报表配置无该功能的开关选项。
+
+3 创建钻取报表和主报表（报表生成器）
+https://docs.microsoft.com/zh-cn/sql/reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder?view=sql-server-ver16
+
+4 使用 SQL Server 移动报表发布服务器创建移动报表
+https://docs.microsoft.com/zh-cn/sql/reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher?view=sql-server-ver16
+
+5 URL 访问 (SSRS)
+https://docs.microsoft.com/zh-cn/sql/reporting-services/url-access-ssrs?view=sql-server-ver16
+
+6 SQL Server Data Tools 中的 Reporting Services (SSDT)
+https://docs.microsoft.com/zh-cn/sql/reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt?redirectedfrom=MSDN&view=sql-server-ver16
+
+7 如何找出保存在ReportServer数据库中的某个报表的xml
+Content就是保存的xml，需要转换
+代码如下：
+SELECT TOP (10) [ItemID]
+      ,[Path]
+      ,[Name]    
+      ,[Content] --报表文档内容
+   -- ,cast ( cast( Content as xml) as varbinary(max))
+--	,cast(cast ( cast( Content as xml) as varbinary(max))as xml)
+    ,cast( Content as xml)
+  FROM [ReportServer].[dbo].[Catalog]
+-----------------------------------------------------------------------------
+update  [ReportServer].[dbo].[Catalog]
+     set [Content]=
+   cast(cast( replace(cast(  Content as nvarchar(max)) ,'GetBusinessDailyConsumIndexByDateTest','GetBusinessDailyConsumIndexByDateTest1')as xml) as varbinary(max))	
+  FROM [ReportServer].[dbo].[Catalog]
+  where name='InfoFlowConsumptionDeptDailyRptTset'
+
+8 RS.exe 实用工具 (SSRS)
+https://docs.microsoft.com/zh-cn/sql/reporting-services/tools/rs-exe-utility-ssrs?view=sql-server-ver16
+PowerShell module ReportingServicesTools
+https://github.com/Microsoft/ReportingServicesTools
+自动部署方式
+https://forum.red-gate.com/discussion/19549/deploy-ssrs-files-automatically
+powershell部署
+https://stackoverflow.com/questions/47579949/deploy-ssrs-reports-on-a-customers-machine-with-powershell
+SSDT相关
+https://docs.microsoft.com/zh-cn/sql/reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt?view=sql-server-ver16
+
+9 SQL Server Data Tools 中的 Reporting Services (SSDT)
+https://docs.microsoft.com/zh-cn/sql/reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt?view=sql-server-ver16
+部署命令demo
+devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2015\Projects\Reports\Reports.sln" /deploy "Release"

@@ -1,0 +1,16 @@
+﻿官方
+https://www.r-project.org/
+https://www.rstudio.com/
+
+1 conda 环境安装R
+conda install -c r r-essentials
+
+2 错误提示：Registered S3 methods overwritten by 'ggplot2 
+参考 https://github.com/tidyverse/ggplot2/issues/3351
+解决方案：卸载重新安装ggplot2
+
+3 安装包 和卸载
+安装包
+install.packages('包名') 
+卸载
+remove.packages('包名') 

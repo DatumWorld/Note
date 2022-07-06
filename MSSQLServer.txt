@@ -200,3 +200,28 @@ https://docs.microsoft.com/zh-cn/sql/relational-databases/in-memory-oltp/faster-
 31 分区
 https://docs.microsoft.com/zh-cn/sql/relational-databases/partitions/partitioned-tables-and-indexes?view=sql-server-ver15
 https://docs.microsoft.com/zh-cn/sql/t-sql/statements/create-partition-function-transact-sql?view=sql-server-ver15
+
+32 Analysis Services 文档
+https://docs.microsoft.com/zh-cn/analysis-services/?view=asallproducts-allversions
+教程
+https://docs.microsoft.com/zh-cn/analysis-services/analysis-services-tutorials-ssas?view=asallproducts-allversions
+https://docs.microsoft.com/zh-cn/analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial?view=asallproducts-allversions
+比较表格和多维解决方案
+https://docs.microsoft.com/zh-cn/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas?view=asallproducts-allversions
+创建多维模型
+https://docs.microsoft.com/zh-cn/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt?view=asallproducts-allversions
+
+33
+SQL server 锁表
+查看哪些表锁定状态
+SELECT request_session_id spid,OBJECT_NAME(resource_associated_entity_id)tableName
+FROM  sys.dm_tran_locks
+WHERE resource_type='OBJECT ' 
+杀死使用表的SPID号
+kill 154
+
+34 DATE_BUCKET 从 origin 参数定义的时间戳或默认原始值 1900-01-01 00:00:00.000（如果未指定 origin 参数）返回与每个日期/时间存储桶的起始值相对应的日期/时间值
+https://docs.microsoft.com/zh-cn/SQL/t-sql/functions/date-bucket-transact-sql?view=sql-server-ver16
+
+35 XML 数据 (SQL Server)
+https://docs.microsoft.com/zh-cn/sql/relational-databases/xml/xml-data-sql-server?view=sql-server-ver16

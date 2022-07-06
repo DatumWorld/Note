@@ -9,3 +9,8 @@ nginx+uwsgi
 
 3 django-redis
 https://pypi.org/project/django-redis/
+
+4 Dynamic models
+https://code.djangoproject.com/wiki/DynamicModels
+https://blog.csdn.net/weixin_33948416/article/details/91941903
+https://stackoverflow.com/questions/7933596/django-dynamic-model-fields/7934577#7934577

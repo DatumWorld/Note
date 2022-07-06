@@ -1,38 +1,40 @@
-¹ÙÍø
+ï»¿å®˜ç½‘
 https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/windows-commands
 
-1 É¾³ıÎÄ¼ş¼ĞÏÂ7ÌìÒÔÇ°µÄÎÄ¼ş
-batÎÄ¼ş´æ·ÅÒÔÏÂ´úÂë£¬×ö³É¶¨Ê±¼Æ»®ÈÎÎñ
+1 åˆ é™¤æ–‡ä»¶å¤¹ä¸‹7å¤©ä»¥å‰çš„æ–‡ä»¶
+batæ–‡ä»¶å­˜æ”¾ä»¥ä¸‹ä»£ç ï¼Œåšæˆå®šæ—¶è®¡åˆ’ä»»åŠ¡
 
 echo  %date% %time% deleting  7 days ago >>backup_log.txt
 set SrcDir=D:\ProjectBackup\
 set DaysAgo=7
 forfiles /p %SrcDir% /s /d -%DaysAgo% /c "cmd /c del /f /q /a @path && rd /s /q @path"
 
- 2 batÄÚµ÷ÓÃ  7z³ÌĞò Ñ¹ËõÎÄ¼ş¼Ğ
+ 2 batå†…è°ƒç”¨  7zç¨‹åº å‹ç¼©æ–‡ä»¶å¤¹
 "C:\Program Files\7-Zip\7z.exe" a -t7z "D:\ProjectBackup\project%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%.7z" "D:\project" -m0=LZMA2 -mhc -mhcf -mmt
-×¢Òâ£ºĞèÒª°²×°7z£¨²Î¿¼7zÃüÁî£©£¬¸ù¾İ»·¾³µ÷Õû¡£
+æ³¨æ„ï¼šéœ€è¦å®‰è£…7zï¼ˆå‚è€ƒ7zå‘½ä»¤ï¼‰ï¼Œæ ¹æ®ç¯å¢ƒè°ƒæ•´ã€‚
 
-3 1ºÍ2 ºÏÒ»Æğ¡£ÊµÏÖ¶¨ÆÚ±¸·İÖÆ¶¨ÎÄ¼ş¼Ğµ½Ö¸¶¨Î»ÖÃ£¬²¢É¾³ı¹ıÆÚ±¸·İ
+3 1å’Œ2 åˆä¸€èµ·ã€‚å®ç°å®šæœŸå¤‡ä»½åˆ¶å®šæ–‡ä»¶å¤¹åˆ°æŒ‡å®šä½ç½®ï¼Œå¹¶åˆ é™¤è¿‡æœŸå¤‡ä»½
 
-4 ÃüÁîĞĞ call ¼Æ»®ÈÎÎñ¡£Ê¹ÓÃschtasks
-call ±¾»ú 
-schtasks /run /tn ¼Æ»®ÈÎÎñÃû×Ö
-call Ô¶³Ì
-schtasks /run /tn ¼Æ»®ÈÎÎñÃû×Ö  /s Ö÷»úip /u ÓÃ»§Ãû /p ÃÜÂë 
+4 å‘½ä»¤è¡Œ call è®¡åˆ’ä»»åŠ¡ã€‚ä½¿ç”¨schtasks
+call æœ¬æœº 
+schtasks /run /tn è®¡åˆ’ä»»åŠ¡åå­—
+call è¿œç¨‹
+schtasks /run /tn è®¡åˆ’ä»»åŠ¡åå­—  /s ä¸»æœºip /u ç”¨æˆ·å /p å¯†ç  
 
-5 ²éÕÒ½ø³Ì jupyter.exe
+5 æŸ¥æ‰¾è¿›ç¨‹ jupyter.exe
 tasklist|find /c /i "jupyter.exe"
-6 É±ËÀ½ø³Ì jupyter.exe
+6 æ€æ­»è¿›ç¨‹ jupyter.exe
 taskkill /f /t /im jupyter.exe
-/f Ç¿ÖÆ   /t É±ËÀ½ø³ÌÊ÷£¨¹ØÁªµÄ¸¸½ø³Ì£©
-°´ÕÕpid kill½ø³Ì
-taskkill /f /pid ½ø³Ìpid
+/f å¼ºåˆ¶   /t æ€æ­»è¿›ç¨‹æ ‘ï¼ˆå…³è”çš„çˆ¶è¿›ç¨‹ï¼‰
+æŒ‰ç…§pid killè¿›ç¨‹
+taskkill /f /pid è¿›ç¨‹pid
 
-7 ÖğĞĞ¶ÁÈ¡ÎÄ¼ş
-for /f %%a in (ÎÄ¼şÃû) do(echo %%a)
+7 é€è¡Œè¯»å–æ–‡ä»¶
+for /f %%a in (æ–‡ä»¶å) do(echo %%a)
 
-8 ´ò¿ªÒ»¸öcmd²¢½øÈëÄ³¸öÂ·¾¶È»ºóÖ´ĞĞÃüÁî
+8 æ‰“å¼€ä¸€ä¸ªcmdå¹¶è¿›å…¥æŸä¸ªè·¯å¾„ç„¶åæ‰§è¡Œå‘½ä»¤
 start cmd /c "cd/d d:\project&activate"
-/c ²»ÏÔÊ¾cmd´°¿Ú  /d ĞŞ¸Äµ±Ç°Ä¿Â¼ÖÁÂ·¾¶Ä¿Â¼  & ÃüÁî¶¼ÒªÖ´ĞĞ
+/c ä¸æ˜¾ç¤ºcmdçª—å£  /d ä¿®æ”¹å½“å‰ç›®å½•è‡³è·¯å¾„ç›®å½•  & å‘½ä»¤éƒ½è¦æ‰§è¡Œ
 
+9 cmd è°ƒç”¨PowerShell æ¸…ç©ºå›æ”¶ç«™
+cmd.exe /c "echo Y|PowerShell.exe -NoProfile -Command Clear-RecycleBin"

@@ -177,3 +177,13 @@ https://pypi.org/project/redis/
 
 29 连接HBase Impala Hive Presto Kafka RabbitMQ
 使用pyhive  impyla happybase kafka-python ampq mqtt等等
+
+30 报错：
+pyodbc.ProgrammingError: ('42000', '[42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]无法执行该操作，因为链接服务器 "BAIDUCLOUD4" 的 OLE DB 访问接口 "SQLNCLI11" 无法启动分布式事务。 (7391) (SQLExecDirectW); [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]链接服务器"BAIDUCLOUD4"的 OLE DB 访问接口 "SQLNCLI11" 返回了消息 "该伙伴事务管理器已经禁止了它对远程/网络事务的支持。"。 (7412)')
+解决： 去掉SQL事务代码，可能需要关闭计数，设置conn连接的 autocommit=True 
+
+31 移除导入的模块，import的逆操作
+del 模块名称
+
+32 错误提示  lstat: path should be string, bytes or os.PathLike, not module
+原因：不能用os.remove删除 模块或包。应该使用安装卸载的方法（或者通过shell删除复制，rm -rf 包位置）。

@@ -9,3 +9,6 @@ https://www.runoob.com/scala/scala-basic-syntax.html
 
 在IDEA中使用
 https://docs.scala-lang.org/getting-started/intellij-track/getting-started-with-scala-in-intellij.html
+
+2 sbt
+https://www.scala-sbt.org/download.html

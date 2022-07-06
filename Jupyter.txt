@@ -75,3 +75,8 @@ for i in l:
 with open("result.html", "w", encoding="utf-8") as f:
     f.write(s)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4 jupyter 删除内核
+jupyter kernelspec list 内核列表
+jupyter kernelspec remove或删除内核jupyter kernelspec uninstall
