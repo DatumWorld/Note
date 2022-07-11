@@ -11,3 +11,38 @@ https://www.springcloud.cc/
 https://maven.apache.org/pom.html
 settings.xml
 https://maven.apache.org/settings.html
+
+4 现象：命令 mvnw spring-boot:run在windows IDEA下 没反应
+解答：不是没反应，而是反应缓慢
+
+5 application.properties
+应用配置文件
+
+6 文件目录结构？
+路由map放在两个文件夹下可能失效（部分起作用）。应该与路由规则有关。
+
+7 构建jar
+https://spring.io/guides/gs/rest-service/
+gradlew build或mvnw clean package
+
+8 打包war
+https://spring.io/guides/gs/convert-jar-to-war/
+
+9 jar 运行报错类似： has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recogni zes class file versions up to 52.0。
+大概意思：jar包编译的java运行时的版本 高于 执行它的运行时的版本。java11 对应版本55，java8 对应版本52.
+原因：多个java环境时可以出现此问题。通过 java -version检查版本。
+解决方法： 调整一致，比如指定正确的java版本。
+比如 "C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-hotspot\bin\java.exe" -jar target/demo-0.0.1-SNAPSHOT.jar
+
+10 jar.original
+https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.first-application.executable-jar
+
+11 连接mssqlserver
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>6.1.0.jre8</version>
+</dependency>
+
+12 microsoft-jdbc-driver-for-sql-server
+https://docs.microsoft.com/zh-cn/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16

@@ -1,0 +1,4 @@
+﻿ML.NET
+https://dotnet.microsoft.com/zh-cn/apps/machinelearning-ai/ml-dotnet
+https://dotnet.microsoft.com/zh-cn/learn/ml-dotnet/get-started-tutorial/intro
+https://github.com/dotnet/machinelearning-samples

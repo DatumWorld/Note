@@ -23,3 +23,16 @@ git push -u origin main
 https://zhuanlan.zhihu.com/p/403089781
 https://zhuanlan.zhihu.com/p/489362379
 
+4 hosts
+
+140.82.113.3       github.com
+140.82.114.20      gist.github.com
+199.232.69.194     github.global.ssl.fastly.net
+151.101.184.133    assets-cdn.github.com
+151.101.184.133    raw.githubusercontent.com
+199.232.28.133     raw.githubusercontent.com 
+151.101.184.133    gist.githubusercontent.com
+151.101.184.133    cloud.githubusercontent.com
+151.101.184.133    camo.githubusercontent.com
+199.232.96.133     avatars.githubusercontent.com
+

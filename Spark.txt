@@ -87,3 +87,13 @@ http://t.zoukankan.com/sparkbigdata-p-5544609.html
 
 14 Spark入Hbase的四种方式效率对比
 https://www.cnblogs.com/runnerjack/p/10480468.html
+
+15 .NET for Apache Spark
+https://docs.microsoft.com/zh-cn/dotnet/spark/what-is-apache-spark-dotnet
+https://github.com/dotnet/spark
+
+16 本机启动
+启动master
+<spark——home>\bin\spark-class org.apache.spark.deploy.master.Master
+启动worker
+<spark——home>\bin\spark-class org.apache.spark.deploy.worker.Worker spark://{masterUI上显示的 IP}:7077 --cores 2 --memory 2G

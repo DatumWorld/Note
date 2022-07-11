@@ -14,3 +14,14 @@ conda install -c r r-essentials
 install.packages('包名') 
 卸载
 remove.packages('包名') 
+
+4 sparklyr
+R连接spark
+
+5 R连接数据库等 RODBC
+
+6 错误： Error in spark_connect_gateway(gatewayAddress, gatewayPort, sessionId, : Gateway in localhost:8880 d
+参考 https://github.com/sparklyr/sparklyr/issues/3129
+
+7 在jupyter中执行 R 安装
+!R -e 'install.packages("Rcpp")'

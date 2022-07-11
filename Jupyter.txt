@@ -80,3 +80,8 @@ with open("result.html", "w", encoding="utf-8") as f:
 4 jupyter 删除内核
 jupyter kernelspec list 内核列表
 jupyter kernelspec remove或删除内核jupyter kernelspec uninstall
+
+
+5 在 Jupyter Notebook 中使用 .NET for Apache Spark（C#  F#  powershell）
+https://docs.microsoft.com/zh-cn/dotnet/spark/how-to-guides/dotnet-spark-jupyter-notebooks
+https://github.com/dotnet/interactive/blob/main/docs/NotebookswithJupyter.md
