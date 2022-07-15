@@ -1,0 +1,30 @@
+﻿官网
+http://kafka.apache.org
+
+1 入门使用demo
+cd ProgramData\kafka_2.13-3.1.0\bin\windows
+
+zookeeper-server-start.bat ..\..\config\zookeeper.properties # 启动zookeeper
+
+kafka-server-start.bat ..\..\config\server.properties # 启动kafka
+
+kafka-topics.bat  --create --bootstrap-server localhost:2181 --replication-factor 1  --partitions 1 --topic topic001 # 创建topic
+
+kafka-topics.bat --list --bootstrap-server localhost:2181
+
+kafka-console-producer.bat --broker-list localhost:9092 --topic topic001 # 生产者中输入字符
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic topic001 --from-beginning
+
+2 中文乱码
+解决方法 代码中进行的utf-8编码不进行改动
+1, chcp 65001 将dos窗口编码变为utf-8
+2,运行jar包时，使用命令:java -Dfile.encoding=utf-8 -jar jar包名
+此时将dos窗口默认编码更改为UTF-8,保证生产消费，编码一致。
+
+3 报错：zookeeper is not a recognized option zookeeper参数不支持
+原因：应该是版本问题
+解决方案：较高版本 使用 --bootstrap-server，较低版本使用 --zookeeper
+
+4 python django 集成
+https://www.jianshu.com/p/216b9db17cf3?u_atoken=3a439704-3205-4a61-a849-63d7d16e3216&u_asession=01t6AgBhZaGSYV4vWMow7whXwuZ7USccRxeOnCaNP7Q9fBwozcjpwGQdr6v9wqaV2vX0KNBwm7Lovlpxjd_P_q4JsKWYrT3W_NKPr8w6oU7K_BM0p6gu7N0W7efabFkAuRMKWrbBzYAhXhkL4v5_cjQmBkFo3NEHBv0PZUm6pbxQU&u_asig=051ZX8QUh5wZOZfUrsSO4L-44x682rI0T_f726uF1fLVMX6BoYQbCEXF_9sL9BrTgnGxriEjVYzmABxNJT7pEphX1tq1K65vKq17NTDyllJ74eMEmH7MqHBnUc056FTybfKYi1Mp0J2WyL_Xg3MoDj-p5ui8yOkd0xm2NXfNHoCRP9JS7q8ZD7Xtz2Ly-b0kmuyAKRFSVJkkdwVUnyHAIJzTaRcZfz0qamk9k3NAXBNqtp0xb7kV6iaydt4qYEZ6Z1df9JIAkyKervFWgmMgV8j-3h9VXwMyh6PgyDIVSG1W-J8IavndynWGybKLBC0QM7IRox2heX479OC2z3E-OFfi9K73HEdbxZVEXNldIVImco56BHRXDuOalhkHTiFwSOmWspDxyAEEo4kbsryBKb9Q&u_aref=gLm7veuGkCGbUwmP4%2B%2BLZMUjjBI%3D
